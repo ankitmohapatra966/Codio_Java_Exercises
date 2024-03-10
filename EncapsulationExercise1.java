@@ -1,87 +1,47 @@
 //add class definitions below this line
-    
-class Watch {
-  private String manufacturer;
-  private String model;
-  private int diameter;
-  private int waterResistance;
-  private String material;
+
+class Fruit {
+  private String name;
+  private String color;
   
-  public Watch (String ma, String mo, int d, int wr, String mat) {
-    manufacturer = ma;
-    model = mo;
-    diameter = d;
-    waterResistance = wr;
-    material = mat;
+  public Fruit(String n, String c) {
+    name = n;
+    color = c;
   }
   
-  public String getManufacturer() {
-    return manufacturer;
+  public String getName() {
+    return name;
   }
   
-  public void setManufacturer(String newManufacturer) {
-    manufacturer = newManufacturer;
+  public void setName(String newName) {
+    name = newName;
   }
   
-  public String getModel() {
-    return model;
+  public String getColor() {
+    return color;
   }
   
-  public void setModel(String newModel) {
-    model = newModel;
-  }
-  
-  public int getDiameter() {
-    return diameter;
-  }
-  
-  public void setDiameter(int newDiameter) {
-    diameter = newDiameter;
-  }
-  
-  public int getWaterResistance() {
-    return waterResistance;
-  }
-  
-  public void setWaterResistance(int newWaterResistance) {
-    waterResistance = newWaterResistance;
-  }
-  
-  public String getMaterial() {
-    return material;
-  }
-  
-  public void setMaterial(String newMaterial) {
-    material = newMaterial;
-  }
-  
-  public String summary() {
-    String summary = "";
-    summary += "Manufacturer: " + capitalize(manufacturer) + "\n";
-    summary += "Model: " + capitalize(model) + "\n";
-    summary += "Diameter: " + diameter + " mm\n";
-    summary += "Water Resistance: " + waterResistance + " m\n";
-    summary += "Material: " + capitalize(material);
-    return summary;
-  }
-  
-  private String capitalize(String s) {
-    String capitalizedString = "";
-    capitalizedString += s.substring(0, 1).toUpperCase();
-    capitalizedString += s.substring(1);
-    return capitalizedString;
+  public void setColor(String newColor) {
+    color = newColor;
   }
 }
   
 //add class definitions above this line
 
-public class CodingExercise2 {
+public class CodingExercise1 {
   public static void main(String[] args) {
     
     //add code below this line
 
-    Watch myWatch = new Watch("omega", "speedmaster", 42, 50, "steel");
-    System.out.println(myWatch.summary());
+    Fruit myFruit = new Fruit("strawberry", "red");
+    
+    System.out.println(myFruit.getName());
+    System.out.println(myFruit.getColor());
+    
+    myFruit.setName("tangerine");
+    myFruit.setColor("orange");
+    System.out.println(myFruit.getName());
+    System.out.println(myFruit.getColor());
 
     //add code above this line
   }
